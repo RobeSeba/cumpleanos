@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    font-size: 10px;
+}
+body{
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+.titulo-principal{
+    text-align: center;
+    margin-top:2rem;
+    color: azure;
+    font-size: 4.7rem;
+}
+
+.contendor-carta{
+    width: 80vw;
+    height: 75vh;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 20px;
+    /*background-color: aqua;*/
+    overflow: auto;
+}
+
+.contenido{
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+.titulo-carta{
+    text-align: center;
+    font-size: 4.8rem;
+    margin-bottom: 1rem;
+}
+.contenido-carta{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+
+
+.boton{
+    padding: 15px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: rgb(52, 125, 167);
+    color: white;
+    font-size: 1.5rem;
+    animation: saltar 3s infinite ease-in;
+    box-shadow: 0px 15px 12px 0px black;
+    cursor:pointer;
+    transition: animation 2s ease-in-out;
+}
+.imagenes{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+.imagenes i{
+    font-size: 5rem;
+    margin: 3rem auto;
+}
+
+.boton:hover{
+    color: black;
+    background-color: palevioletred;
+}
+.ocultar{
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+
+@keyframes saltar {
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-5rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .titulo-principal{
+        font-size: 3.5rem;
+    }
+    .titulo-carta{
+        font-size: 3rem;
+    }
+
+    .contenido-carta{
+        font-size: 2rem;
+    }
+  }
+
+
+.balloon {
+    position: absolute;
+    width: 8vw;
+    height: 12vw;
+    max-width: 50px;
+    max-height: 70px;
+    background: radial-gradient(circle at 50% 50%, #FF69B4, #FF1493);
+    border-radius: 50%;
+    animation: fall 5s linear infinite;
+    opacity: 0;
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(-100vh) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
